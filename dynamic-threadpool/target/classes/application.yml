@@ -1,0 +1,20 @@
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    database: 5
+server:
+  port: 8082  # 默认是8080，可以修改为其他端口
+thread:
+  pool:
+    app-name: my-app
+    core-pool-size: 5
+    max-pool-size: 10
+    queue-capacity: 100
+    thread-name-prefix: dynamic-thread-
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
